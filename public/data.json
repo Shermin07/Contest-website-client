@@ -1,0 +1,39 @@
+[
+    {
+      "contestName": "Coding Challenge",
+      "image": "https://img.freepik.com/free-vector/day-programmer-poster_1308-114247.jpg?size=626&ext=jpg&uid=R121205384&ga=GA1.1.732846257.1688661449&semt=ais",
+      "attemptedCount": 120,
+      "description": "Test your coding skills with this challenging programming contest."
+    },
+    {
+      "contestName": "Math Olympiad",
+      "image": "https://img.freepik.com/free-photo/learning-education-mathematics-calculation-teaching-concept_53876-167099.jpg?size=626&ext=jpg&uid=R121205384&ga=GA1.1.732846257.1688661449&semt=ais",
+      "attemptedCount": 85,
+      "description": "A competition for mathematical enthusiasts to showcase their problem-solving abilities."
+    },
+    {
+      "contestName": "Science Fair",
+      "image": "https://img.freepik.com/premium-photo/tiltshift-photoshoot-style-with-advanced-technology-showcases-modern-unique-futuristic-look_655090-709181.jpg?size=626&ext=jpg&uid=R121205384&ga=GA1.1.732846257.1688661449&semt=ais",
+      "attemptedCount": 65,
+      "description": "Explore the wonders of science and present your innovative projects in this exciting science fair."
+    },
+    {
+      "contestName": "Artistic Expression",
+      "image": "https://img.freepik.com/free-photo/fashion-beautiful-girl-with-bright-make-up-among-eustomas_176420-734.jpg?size=626&ext=jpg&uid=R121205384&ga=GA1.1.732846257.1688661449&semt=ais",
+      "attemptedCount": 42,
+      "description": "Express your creativity through various art forms in this inspiring artistic expression contest."
+    },
+    {
+      "contestName": "Quiz Bowl",
+      "image": "https://img.freepik.com/free-photo/mystery-box-collage_23-2150061727.jpg?size=626&ext=jpg&uid=R121205384&ga=GA1.1.732846257.1688661449&semt=ais",
+      "attemptedCount": 150,
+      "description": "Test your general knowledge and quick thinking in this fast-paced quiz bowl competition."
+    },
+    {
+      "contestName": "Robotics Challenge",
+      "image": "https://img.freepik.com/free-photo/indoor-workshop-buzzing-with-skilled-teamwork-innovation-generated-by-ai_188544-37273.jpg?size=626&ext=jpg&uid=R121205384&ga=GA1.1.732846257.1688661449&semt=ais",
+      "attemptedCount": 55,
+      "description": "Build and program robots to compete in this thrilling robotics challenge."
+    }
+  ]
+  
