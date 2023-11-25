@@ -15,7 +15,7 @@ const Banner = () => {
       
        <div>
      
-     <Carousel>
+     <Carousel className="text-center">
         {bannerData &&
           bannerData.map((item, index) => (
             <div key={`carousel-item${index + 1}`} style={{ position: 'relative', height: '530px' }}>
