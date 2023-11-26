@@ -1,14 +1,31 @@
-import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { Link, NavLink} from "react-router-dom";
+import { AuthContext, auth } from "../../../Provider/AuthProvider";
 
 
 const Navber = () => {
+  const {user,logOut} = useContext(AuthContext)
+  console.log(user)
+
+  const handleSignOut = () =>{
+    logOut(auth)
+    .then(result =>{
+        console.log(result)
+       
+       
+    } )
+    .catch(error =>{
+        console.log(error)
+    })
+  }
 
 
     const navLinks = <>
 
    <li><NavLink to='/'> Home  </NavLink></li>
-    
-    
+   <li><NavLink to='/allContest'> All Contest  </NavLink></li>
+   
+  
     </>
     return (
         <div>
@@ -31,21 +48,40 @@ const Navber = () => {
     </ul>
   </div>
   <div className="navbar-end">
+
+  <div className="dropdown dropdown-end">
+        <label tabIndex={0} >
+        {user && user.photoURL ? (
+                <img
+                  className="w-10 h-10 rounded-full object-cover"
+                  src={user.photoURL}
+                  alt="User"
+                />
+              ) : (
+                <img
+                  className="w-10 h-10 rounded-full object-cover"
+                  src="https://img.freepik.com/premium-vector/account-icon-user-icon-vector-graphics_292645-552.jpg?size=626&ext=jpg&uid=R121205384&ga=GA1.1.732846257.1688661449&semt=ais"
+                  alt="Default User"
+                />
+              )}
+
+          
+          </label>
+        <ul tabIndex={0} className="menu dropdown-content z-[1] p-2 bg-base-100 rounded-box w-52 mt-4">
+        <Link>{user ? user.displayName : "Guest"}</Link>
+              <Link>Dashboard</Link>
+              {user ? (
+                <li><Link onClick={handleSignOut}>LogOut</Link></li>
+              ) : (
+                <li><NavLink to='/login'>Login</NavLink></li>
+              )}
+        
+         
+         
+        </ul>
+      </div>
    
-    <ul className="menu menu-horizontal px-1">
-    
-      <li tabIndex={0}>
-        <details>
-          <summary> <a className="btn">Button</a></summary>
-          <ul className="p-2">
-            <li><a>User</a></li>
-            <li><a>Dashboard</a></li>
-            <li><a>Logout</a></li>
-          </ul>
-        </details>
-      </li>
-    
-    </ul>
+   
   </div>
 </div>    
         </div>

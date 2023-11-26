@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 
 
 
@@ -32,6 +32,7 @@ const ContestCreator = () => {
                 <p><span className='font-bold'>Contest Creator:</span> {data.contestCreator}</p>
                 <p className='mt-12'><span className='font-bold'>Contest Name:</span> {data.contestName}</p>
                 <p><span className='font-bold'>Description:</span> {data.description}</p>
+                <Link to='/allContest' className='btn' >Added</Link>
                 </SwiperSlide>)
         }
       
