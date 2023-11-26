@@ -6,6 +6,10 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import Dashboard from "../Dashboard/Dashboard";
 import Participated from "../Dashboard/Participated/Participated";
+import WinningContestPage from "../Dashboard/WinningContestPage/WinningContestPage";
+import AddContest from "../Dashboard/Creator/AddContest";
+import CreatedContest from "../Dashboard/Creator/CreatedContest/CreatedContest";
+import ContestSubmitted from "../Dashboard/Creator/ContestSubmitted/ContestSubmitted";
 
 
 
@@ -46,6 +50,22 @@ export const router = createBrowserRouter([
                 path:'/dashboard/participated',
                 element: <Participated></Participated>,
                 loader: () =>fetch('http://localhost:5000/dashboard/participated')
+            },
+            {
+                path:'/dashboard/winningContest',
+                element:<WinningContestPage></WinningContestPage>
+            },
+            {
+                path:'/dashboard/addContest',
+                element:<AddContest></AddContest>
+            },
+            {
+                path:'/dashboard/createdContest',
+                element:<CreatedContest></CreatedContest>
+            },
+            {
+                path:'/dashboard/contestSubmittedPage',
+                element:<ContestSubmitted></ContestSubmitted>
             }
         ]
 
