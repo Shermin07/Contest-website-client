@@ -69,7 +69,7 @@ const Navber = () => {
           </label>
         <ul tabIndex={0} className="menu dropdown-content z-[1] p-2 bg-base-100 rounded-box w-52 mt-4">
         <Link>{user ? user.displayName : "Guest"}</Link>
-              <Link>Dashboard</Link>
+              <Link to='/dashboard'>Dashboard</Link>
               {user ? (
                 <li><Link onClick={handleSignOut}>LogOut</Link></li>
               ) : (
