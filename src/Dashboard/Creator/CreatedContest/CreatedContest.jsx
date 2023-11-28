@@ -1,11 +1,42 @@
-import { useLoaderData } from "react-router-dom";
+import {  useLoaderData } from "react-router-dom";
 import { FaRegEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
+import { useNavigate } from 'react-router-dom';
+
 
 const CreatedContest = () => {
    
    const createdData = useLoaderData();
-   console.log(createdData);
+  // console.log(createdData);
+  const navigate = useNavigate();
+
+  const handleSubmit = async (contestId) => {
+    try {
+     
+      const contestToSubmit = createdData.find(data => data._id === contestId);
+
+      const response = await fetch(`http://localhost:5000/dashboard/createdContest/${contestId}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(contestToSubmit),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        console.log('Submission successful:', data.data);
+    
+        navigate('/dashboard/contestSubmittedPage');
+      } else {
+        console.error('Submission failed:', data.message);
+      }
+    } catch (error) {
+      console.error('Error submitting contest:', error);
+    }
+  };
+
 
     return (
         <div>
@@ -22,7 +53,7 @@ const CreatedContest = () => {
         <th>Price Money</th>
         <th>Edit</th>
         <th>Delete</th>
-        <th></th>
+        <th>Submit</th>
       </tr>
     </thead>
     <tbody>
@@ -57,6 +88,7 @@ const CreatedContest = () => {
         <th>
         <MdDelete />
         </th>
+        <th  ><button onClick={() => handleSubmit(data._id)}>Submit</button></th>
       </tr>
      
         

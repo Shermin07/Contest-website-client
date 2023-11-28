@@ -65,8 +65,9 @@ export const router = createBrowserRouter([
                 loader: () => fetch('http://localhost:5000/dashboard/addContest')
             },
             {
-                path:'/dashboard/contestSubmittedPage',
-                element:<ContestSubmitted></ContestSubmitted>
+                path:'/dashboard/contestSubmittedPage/:contestId',
+                element:<ContestSubmitted></ContestSubmitted>,
+                loader: ({params}) =>fetch(`http://localhost:5000/dashboard/contestSubmittedPage/${params.contestId}`)
             }
         ]
 
