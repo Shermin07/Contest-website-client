@@ -54,9 +54,9 @@ const Login = () => {
         //console.log('Hello from google')
         signInWithGoogle()
         .then(res =>{
-           // const loggedInUser = res.user ;
+          
             console.log(res) ;
-            //setUser(loggedInUser)
+           
         })
         .catch(error =>{
             console.log('error', error)

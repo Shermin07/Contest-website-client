@@ -10,6 +10,10 @@ import WinningContestPage from "../Dashboard/WinningContestPage/WinningContestPa
 import AddContest from "../Dashboard/Creator/AddContest";
 import CreatedContest from "../Dashboard/Creator/CreatedContest/CreatedContest";
 import ContestSubmitted from "../Dashboard/Creator/ContestSubmitted/ContestSubmitted";
+import Error from "../Pages/Error/Error";
+import ManageUsers from "../Dashboard/Admin/ManageUsers/ManageUsers";
+import ManageContests from "../Dashboard/Admin/ManageContests/ManageContests";
+import axios from "axios";
 
 
 
@@ -27,6 +31,7 @@ export const router = createBrowserRouter([
      {
         path:'/allContest',
         element: <AllContest></AllContest>,
+        loader:() => fetch('http://localhost:5000/dashboard/addContest')
         
      },
      {
@@ -36,6 +41,10 @@ export const router = createBrowserRouter([
      {
         path:'/register',
         element:<Register></Register>
+     },
+     {
+        path:'*',
+        element:<Error></Error>
      }
 
 
@@ -65,9 +74,17 @@ export const router = createBrowserRouter([
                 loader: () => fetch('http://localhost:5000/dashboard/addContest')
             },
             {
-                path:'/dashboard/contestSubmittedPage/:contestId',
+                path: '/dashboard/contestSubmittedPage/:contestId',
                 element:<ContestSubmitted></ContestSubmitted>,
-                loader: ({params}) =>fetch(`http://localhost:5000/dashboard/contestSubmittedPage/${params.contestId}`)
+                loader: ({ params }) => axios.get(`http://localhost:5000/dashboard/contestSubmittedPage/${params.contestId}`).then(res => res.data),
+            },
+            {
+                path:'/dashboard/manageUsers',
+                element:<ManageUsers></ManageUsers>
+            },
+            {
+                path:'/dashboard/manageContests',
+                element:<ManageContests></ManageContests>
             }
         ]
 

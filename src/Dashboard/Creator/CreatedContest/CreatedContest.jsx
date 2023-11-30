@@ -4,11 +4,12 @@ import { MdDelete } from "react-icons/md";
 import { useNavigate } from 'react-router-dom';
 
 
-const CreatedContest = () => {
+const CreatedContest = ({ contests, isAdmin }) => {
    
    const createdData = useLoaderData();
   // console.log(createdData);
   const navigate = useNavigate();
+  
 
   const handleSubmit = async (contestId) => {
     try {
@@ -36,6 +37,7 @@ const CreatedContest = () => {
       console.error('Error submitting contest:', error);
     }
   };
+
 
 
     return (
