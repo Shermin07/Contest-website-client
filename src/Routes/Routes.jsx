@@ -14,6 +14,8 @@ import Error from "../Pages/Error/Error";
 import ManageUsers from "../Dashboard/Admin/ManageUsers/ManageUsers";
 import ManageContests from "../Dashboard/Admin/ManageContests/ManageContests";
 import axios from "axios";
+import ContestDetails from "../Pages/ContestDetails/ContestDetails";
+import PaymentPage from "../Pages/PaymentPage/PaymentPage";
 
 
 
@@ -45,7 +47,15 @@ export const router = createBrowserRouter([
      {
         path:'*',
         element:<Error></Error>
-     }
+     },
+     {
+        path: '/contest/:contestId',
+        element: <ContestDetails></ContestDetails>,
+      },
+      {
+        path:'/paymentPage',
+        element:<PaymentPage></PaymentPage>
+      }
 
 
     ]
