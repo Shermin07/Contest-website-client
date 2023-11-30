@@ -5,7 +5,7 @@ const ContestWinner = () => {
      
         
      <div>
-         <h1 className="text-center font-bold text-3xl mt-[600px] mb-3">Contest Winner</h1>
+         <h1 className="text-center font-bold text-3xl mt-[2400px] md:mt-[1100px] lg:mt-[600px] mb-3">Contest Winner</h1>
          
       <div className="card card-side h-[290px] mb-4 bg-base-100 shadow-xl">
   <figure><img src="https://img.freepik.com/free-photo/beautiful-woman-street_23-2147654273.jpg?size=626&ext=jpg&uid=R121205384&ga=GA1.1.732846257.1688661449&semt=ais"  alt="Movie"/></figure>

@@ -59,7 +59,7 @@ const AddContest = () => {
         </Helmet>
         <h1 className="text-center text-3xl mt-3 mb-5">Add Contest</h1>
         
-  <div className="hero-content bg-orange-900 ml-44  ">
+  <div className="hero-content bg-orange-900 ml-3  ">
    
     <div className="card  max-w-full ">
       <form onSubmit={handleAddContest} className="">

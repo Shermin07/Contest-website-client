@@ -16,7 +16,7 @@ const AllContest = () => {
     <div>
       <h1 className="text-center font-center text-2xl">All contest</h1>
 
-      <div>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
         {allDatas?.map((allData) => (
           <div key={allData._id} className="card card-compact w-96 bg-base-100 shadow-xl">
             <figure><img src={allData.image} alt="Shoes" /></figure>
