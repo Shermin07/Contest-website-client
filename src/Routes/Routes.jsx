@@ -16,6 +16,10 @@ import ManageContests from "../Dashboard/Admin/ManageContests/ManageContests";
 import axios from "axios";
 import ContestDetails from "../Pages/ContestDetails/ContestDetails";
 import PaymentPage from "../Pages/PaymentPage/PaymentPage";
+import Details from "../Pages/Details/Details";
+import ContestTopics from "../Pages/Home/ContestTopics/ContestTopics";
+import Blog from "../Pages/Blog/Blog";
+import Rules from "../Pages/Rules/Rules";
 
 
 
@@ -28,14 +32,28 @@ export const router = createBrowserRouter([
 
         path:'/',
         element:<Home></Home>,
-        loader: () => fetch('http://localhost:5000/home')
+        loader: () => fetch('https://a12-contest-website-server.vercel.app/home')
+     },
+     { 
+        path: '/',
+        element:<ContestTopics></ContestTopics>
+      
+        
+
+     },
+     {
+        path:'/details/:id',
+        element: <Details></Details>,
+      
+       
      },
      {
         path:'/allContest',
         element: <AllContest></AllContest>,
-        loader:() => fetch('http://localhost:5000/dashboard/addContest')
+        loader:() => fetch('https://a12-contest-website-server.vercel.app/dashboard/addContest')
         
      },
+
      {
         path:'/login',
         element: <Login></Login>
@@ -55,6 +73,14 @@ export const router = createBrowserRouter([
       {
         path:'/paymentPage',
         element:<PaymentPage></PaymentPage>
+      },
+      {
+        path:'/blog',
+        element:<Blog></Blog>
+      },
+      {
+        path:'/rules',
+        element:<Rules></Rules>
       }
 
 
@@ -68,7 +94,7 @@ export const router = createBrowserRouter([
             {
                 path:'/dashboard/participated',
                 element: <Participated></Participated>,
-                loader: () =>fetch('http://localhost:5000/dashboard/participated')
+                loader: () =>fetch('https://a12-contest-website-server.vercel.app/dashboard/participated')
             },
             {
                 path:'/dashboard/winningContest',
@@ -81,12 +107,12 @@ export const router = createBrowserRouter([
             {
                 path:'/dashboard/createdContest',
                 element:<CreatedContest></CreatedContest>,
-                loader: () => fetch('http://localhost:5000/dashboard/addContest')
+                loader: () => fetch('https://a12-contest-website-server.vercel.app/dashboard/addContest')
             },
             {
                 path: '/dashboard/contestSubmittedPage/:contestId',
                 element:<ContestSubmitted></ContestSubmitted>,
-                loader: ({ params }) => axios.get(`http://localhost:5000/dashboard/contestSubmittedPage/${params.contestId}`).then(res => res.data),
+                loader: ({ params }) => axios.get(`https://a12-contest-website-server.vercel.app/dashboard/contestSubmittedPage/${params.contestId}`).then(res => res.data),
             },
             {
                 path:'/dashboard/manageUsers',

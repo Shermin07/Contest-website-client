@@ -6,7 +6,7 @@ const ManageContests = () => {
   const [contests, setContests] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/dashboard/manageContests')
+    axios.get('https://a12-contest-website-server.vercel.app/dashboard/manageContests')
       .then(response => {
         setContests(response.data);
       })
@@ -26,7 +26,7 @@ const ManageContests = () => {
       confirmButtonText: 'Yes, delete it!'
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.delete(`http://localhost:5000/dashboard/manageContests/${contestId}`)
+        axios.delete(`https://a12-contest-website-server.vercel.app/dashboard/manageContests/${contestId}`)
           .then(response => {
             setContests(prevContests => prevContests.filter(contest => contest._id !== contestId));
             Swal.fire('Deleted!', 'The contest has been deleted.', 'success');
@@ -41,7 +41,7 @@ const ManageContests = () => {
 
   const handleConfirmContest = (contestId) => {
   
-    axios.post(`http://localhost:5000/dashboard/manageContests/confirm/${contestId}`)
+    axios.post(`https://a12-contest-website-server.vercel.app/dashboard/manageContests/confirm/${contestId}`)
       .then(response => {
       
         console.log(response);

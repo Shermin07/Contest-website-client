@@ -16,7 +16,7 @@ const CreatedContest = ({ contests, isAdmin }) => {
      
       const contestToSubmit = createdData.find(data => data._id === contestId);
 
-      const response = await fetch(`http://localhost:5000/dashboard/createdContest/${contestId}`, {
+      const response = await fetch(`https://a12-contest-website-server.vercel.app/dashboard/createdContest/${contestId}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

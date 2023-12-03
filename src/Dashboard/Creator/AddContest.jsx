@@ -16,8 +16,9 @@ const AddContest = () => {
         const deadline= e.target.deadline.value  ; 
         const taskSubmission = e.target.taskSubmission.value; 
         const contestType = e.target.contestType.value ;
+        const  participants = e.target.participants.value ;
        
-        console.log(contestName,image,price,description,priceMoney,deadline, taskSubmission,contestType)
+        console.log(contestName,image,price,description,priceMoney,deadline, taskSubmission,contestType,participants)
 
         const addContest = {
             contestName,   
@@ -27,12 +28,13 @@ const AddContest = () => {
             priceMoney,
             deadline,
              taskSubmission,
-             contestType
+             contestType,
+             participants
     
            }
            console.log(addContest)
 
-           fetch('http://localhost:5000/dashboard/addContest',{
+           fetch('https://a12-contest-website-server.vercel.app/dashboard/addContest',{
             method :'POST',
             headers :{
                 'content-type' :'application/json'
@@ -111,13 +113,22 @@ const AddContest = () => {
           <input type="text" placeholder="Contest Type" name="contestType" className="input  w-[300px] input-bordered" required />
         </div>
        </div>
-       <div className="form-control">
+      <div className="grid grid-cols-1 md:flex gap-4">
+      <div className="form-control">
           <label className="label">
             <span className="label-text text-white"> Deadline</span>
           </label>
           <input type="date" placeholder="Deadline" name="deadline" className="input  w-[300px] input-bordered" required />
          
         </div>
+       <div className="form-control">
+          <label className="label">
+            <span className="label-text text-white"> Participants</span>
+          </label>
+          <input type="number" placeholder=" Participants" name="participants" className="input  w-[300px] input-bordered" required />
+         
+        </div>
+      </div>
        <div className="form-control">
           <label className="label">
             <span className="label-text text-white">Task Submission text Instructions</span>

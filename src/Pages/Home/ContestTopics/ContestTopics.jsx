@@ -1,10 +1,11 @@
 /* eslint-disable react/jsx-key */
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 
 const ContestTopics = () => {
     const topicsData = useLoaderData();
-    console.log(topicsData);
+   console.log(topicsData);
+    
     return (
 
      <div>
@@ -19,7 +20,8 @@ const ContestTopics = () => {
               <h3 className="font-semibold">Attempted: {topic.attemptedCount}</h3>
               <p className="font-semibold">Description: {topic.description}</p>
               <div className="card-actions justify">
-                <button className="btn bg-orange-400 text-white">Details</button>
+              <Link to={`/details/${topic._id}`} className="btn btn-primary">Details</Link>
+              
               </div>
             </div>
           </div> )

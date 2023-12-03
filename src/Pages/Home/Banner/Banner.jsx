@@ -8,14 +8,15 @@ import { useLoaderData } from "react-router-dom";
 const Banner = () => {
 
    const bannerData = useLoaderData()
-   console.log(bannerData)
+   //console.log(bannerData)
+   
   
   
     return (
       
        <div>
      
-     <Carousel className="text-center">
+     <Carousel  className="text-center mt-9">
         {bannerData &&
           bannerData.map((item, index) => (
             <div key={`carousel-item${index + 1}`} style={{ position: 'relative', height: '530px' }}>

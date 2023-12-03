@@ -6,7 +6,7 @@ const ManageUsers = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/manageUsers')
+    axios.get('https://a12-contest-website-server.vercel.app/manageUsers')
       .then(response => {
         setUsers(response.data);
       })
@@ -16,7 +16,7 @@ const ManageUsers = () => {
   }, []); 
 
   const toggleUserRole = (userId) => {
-    axios.post(`http://localhost:5000/manageUsers/${userId}`)
+    axios.post(`https://a12-contest-website-server.vercel.app/manageUsers/${userId}`)
       .then(response => {
         console.log(response);
         setUsers(prevUsers =>

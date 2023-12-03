@@ -24,6 +24,8 @@ const Navber = () => {
 
    <li><NavLink to='/'> Home  </NavLink></li>
    <li><NavLink to='/allContest'> All Contest  </NavLink></li>
+   <li><NavLink to='/blog'> Blogs  </NavLink></li>
+   <li><NavLink to='/rules'> Rules  </NavLink></li>
    
   
     </>
