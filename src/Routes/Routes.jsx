@@ -37,13 +37,11 @@ export const router = createBrowserRouter([
      { 
         path: '/',
         element:<ContestTopics></ContestTopics>
-      
-        
-
      },
      {
         path:'/details/:id',
         element: <Details></Details>,
+       // loader: ({params}) =>fetch(`http://localhost:5000/home/${params.id}`)
       
        
      },
