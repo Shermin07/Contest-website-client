@@ -4,73 +4,72 @@ import { Helmet } from "react-helmet";
 const Blog = () => {
     return (
         <div className="mb-7">
-         
-           <Helmet>
+          <Helmet>
           <title>a12-contest | Blogs</title>
         </Helmet>
           <h1 className="text-3xl font-bold text-center text-cyan-900">Blogs</h1>
          <div className="card bg-cyan-900 text-white p-3 mx-2 mt-8 mb-4">
  
-    <h2 className="card-title mb-3">Q: What is one way data building?</h2>
-    <p> <span className="font-bold">Ans:</span> One-way data binding is a data flow model used in many front-end frameworks and libraries, such as React, Angular, and Vue. In one-way data binding, data flows in one direction, from the data source to the user interface (UI) elements. </p>
+    <h2 className="card-title mb-3">1. Coding Challenge:</h2>
+    <p> 
+Title: "Mastering the Coding Challenge: Strategies for Success"<br></br>
+In this article, we delve into effective strategies for tackling coding challenges. From time management to debugging techniques, discover the secrets to excel in competitive coding. </p>
   
  
 </div>
          <div className="card mx-2 mt-8  bg-cyan-900 text-white p-3 ">
  
-    <h2 className="card-title mb-3">Q: What is NPM in node.js?</h2>
-    <p> <span className="font-bold">Ans:</span> In Node.js, npm stands for "Node Package Manager."  It is a package manager and dependency management tool that comes bundled with Node.js when you install it.npm is a fundamental tool for Node.js development, making it easy to manage dependencies and streamline the development process. </p>
+    <h2 className="card-title mb-3">2. Math Olympiad:</h2>
+    <p> 
+Title: "Unraveling the Beauty of Math: A Journey through Olympiad Problems"<br></br>
+Embark on a mathematical journey as we explore intriguing problems from Math Olympiads. Uncover the elegance behind solutions and how these competitions inspire a love for pure mathematics. </p>
   
  
 </div>
          <div className="card mx-2 mt-8  bg-cyan-900 text-white p-3 ">
  
-    <h2 className="card-title mb-3">Q: Difference between Mongodb database vs mySQL database?</h2>
-    <p> <span className="font-bold">Ans:</span> MongoDB and MySQL have significant differences in terms of their data models, architecture, and use cases Here's a comparison of MongoDB and MySQL: <br></br>
+    <h2 className="card-title mb-3">3. Science Fair:</h2>
+    <p> 
+    Title: "From Hypothesis to Discovery: Navigating the Science Fair Adventure"<br></br>
+Join us in understanding the essence of a science fair project. From formulating a hypothesis to crafting an engaging presentation, learn how to make your mark in the world of scientific exploration.
+ </p>
+  
+ 
+</div>
+         <div className="card mx-2 mt-8  bg-cyan-900 text-white p-3 ">
+ 
+    <h2 className="card-title mb-3">4. Artistic Expression:</h2>
+    <p>
 
-
-    <div className="overflow-x-auto mt-6">
-  <table className="table">
-    {/* head */}
-    <thead className="text-white text-xl font-bold">
-      <tr>
-        <th></th>
+    Title: "Beyond the Canvas: Expressive Art in a Digital Age"<br></br>
+Explore the diverse realm of artistic expression, from traditional paintings to digital masterpieces. This article celebrates the fusion of technology and creativity, showcasing how artists redefine boundaries.
+    </p>
+  
+ 
+  <div className="card mx-2 mt-8  bg-cyan-900 text-white p-3 ">
+ 
+    <h2 className="card-title mb-3">5. Quiz Bowl:</h2>
+    <p>
+    Title: "Thriving in the Quiz Bowl Arena: Tips for Team Triumph"<br></br>
+Dive into the world of Quiz Bowl competitions, where quick thinking and teamwork reign supreme. Discover strategies for effective collaboration and how to keep your cool under the pressure of rapid-fire questions.
+    </p>
+  
+ 
+</div>
+ 
+         <div className="card mx-2 mt-8  bg-cyan-900 text-white p-3 ">
+ 
+    <h2 className="card-title mb-3">6. Robotics Challenge:</h2>
+    <p>
+    Title: "Minds and Machines: Crafting the Future through Robotics Challenges"<br></br>
+Explore the evolution of robotics challenges and their impact on technological innovation. From problem-solving to designing autonomous robots, this article delves into the fascinating intersection of minds and machines.
+    </p>
+  
+ 
+</div>
        
-        <th>MongoDB</th>
-        <th>MySQL</th>
-      </tr>
-    </thead>
-    <tbody>
-      {/* row 1 */}
-      <tr>
-        <th>1</th>
-        <td>MongoDB is a NoSQL database, which means it <br></br>uses a document-oriented data model.</td>
-        <td>MySQL is a relational database management system (RDBMS), where data is organized into tables<br></br> with predefined schemas, and relationships between tables are maintained through foreign keys.</td>
-      
-      </tr>
-      {/* row 2 */}
-      <tr className="hover">
-        <th>2</th>
-        <td>MongoDB: MongoDB is schema-less, allowing documents in the same collection to have different fields. This flexibility is well-suited for applications where the data structure evolves over time.</td>
-        <td>MySQL enforces a fixed schema, meaning that the table structure must be defined upfront. Any changes to the schema may require altering tables or creating new ones.</td>
-      
-      </tr>
-      {/* row 3 */}
-      <tr>
-        <th>3</th>
-        <td>MongoDB: MongoDB uses a flexible and powerful query language that supports various queries, including JSON-based queries, geospatial queries, and full-text search.</td>
-        <td> MySQL uses SQL (Structured Query Language) for querying data. It is highly structured and well-suited for complex join operations.</td>
-      
-      </tr>
-    </tbody>
-  </table>
-</div>
-    
-     </p>
-  
- 
-</div>
         </div>
+          </div>
     );
 };
 
